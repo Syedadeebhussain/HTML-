@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           background-color: grey;
+           align-items: center;
+           font: bolder 12px Arial;
+           justify-content: center;
+           height: 100vh;
+           display: flex;
+        }
+        #clock{
+            border: 1px solid green;
+            padding: 40px;
+           border-radius: 10px;
+           background-color:black;
+           color:aqua
+        }
+        #date{
+            text-align: center;
+            font-size:30px;
+        }
+        ul{
+            list-style:none;
+            display:flex;
+            font-size: 90px;
+            gap: 15px;
+        }
+        .border{
+            border:2px solid red;
+        }
+        #adeeb{
+            text-align: center;
+            font-size:30px;
+        }
+    </style>
+    <script>
+        function clock(){
+            var months=["January","February","March","April","May","June","July","August","September","October","November","December"]
+            var days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]    
+            var date=new Date();
+            document.getElementById("date").innerHTML=days[date.getDay()]+" "+date.getDate()+" "+months[date.getMonth()]+" "+date.getFullYear();
+           var hours=date.getHours();
+           var minutes=date.getMinutes();
+           var second=date.getSeconds();
+           document.getElementById("hours").innerHTML=hours;
+           document.getElementById("minute").innerHTML=minutes;
+           document.getElementById("second").innerHTML=second;
+        }
+        var inter=setInterval(clock,400)
+    </script>
+</head>
+<body>
+    <div id="container">
+    <div id="clock">
+        <div id="adeeb" style="color:aqua">ADEEB'S CLOCK</div>
+        <p></p>
+        <div id="date" class="border">Sunday 31 December 2023</div>
+    <ul>
+        <li id="hours" class="border">05</li>
+        <li id="point">:</li>
+        <li id="minute" class="border">20</li>
+        <li id="point">:</li>
+        <li id="second" class="border">25</li>
+    </ul>
+    </div>
+    </div>
+</body>
+</html> 
