@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        #container{
+            display:flex;
+            gap:20px;
+        }
+       
+        h1{
+            color:#95ff00;
+            text-shadow:0px 0px 20px #ffff31;
+            font-family:sans-serif;
+            font-size:50px;
+        }
+        #newyear{
+            animation: move 3s forwards ease-in;
+            border-left:2px solid  #fbff00;
+            background-color: #000000;
+        }
+        @keyframes  move{
+            from{
+                margin-left:-420px;
+                width: 400px;
+            }
+            to{
+                margin-left:0px;
+                width:0px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>HAPPY NEW YEAR</h1>
+        <div id="newyear">
+        
+        </div>
+    </div>
+</body>
+</html>
